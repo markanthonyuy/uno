@@ -28,7 +28,7 @@ export default function Home() {
         }}
       >
         <motion.div
-          className="absolute w-12 h-12 bg-lime-500 rounded-full z-50 opacity-50"
+          className="absolute w-12 h-12 bg-lime-500 rounded-full z-50 opacity-50 pointer-events-none"
           animate={{
             x: mousePosition.x - 24,
             y: mousePosition.y - 26,
@@ -36,7 +36,7 @@ export default function Home() {
           transition={{ type: 'spring' }}
         />
         <motion.div
-          className="absolute w-8 h-8 bg-red-500 rounded-full z-50 opacity-50"
+          className="absolute w-8 h-8 bg-red-500 rounded-full z-50 opacity-50 pointer-events-none"
           animate={{
             x: mousePosition.x - 16,
             y: mousePosition.y - 18,
@@ -44,7 +44,7 @@ export default function Home() {
           transition={{ type: 'tween' }}
         />
         <motion.div
-          className="absolute w-4 h-4 bg-yellow-500 rounded-full z-50 opacity-50"
+          className="absolute w-4 h-4 bg-yellow-500 rounded-full z-50 opacity-50 pointer-events-none"
           animate={{
             x: mousePosition.x - 8,
             y: mousePosition.y - 10,

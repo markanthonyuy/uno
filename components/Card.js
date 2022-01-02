@@ -30,7 +30,7 @@ export default function Card({ name, brand, dates, reaction = 'No reaction' }) {
 
   return (
     <motion.div
-      className="flex justify-between flex-col bg-white p-3 shadow-md rounded-lg border-blue-200 border"
+      className="flex justify-between flex-col bg-white p-3 shadow-md rounded-lg border-blue-200 border hover:bg-blue-50 hover:shadow-lg"
       variants={container}
       initial="hidden"
       whileInView="show"
@@ -51,7 +51,7 @@ export default function Card({ name, brand, dates, reaction = 'No reaction' }) {
           ))}
         </div>
       </div>
-      <p className="italic text-xs text-gray-500 border-gray-200 border-t pt-2 mt-2">
+      <p className="italic text-xs text-gray-500 border-blue-100 border-t pt-2 mt-2">
         Remarks: {reaction}
       </p>
     </motion.div>
