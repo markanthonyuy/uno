@@ -61,13 +61,14 @@ export default function Home() {
               src="/uno.jpg"
               width="400"
               height="280"
-              className="rounded-lg "
+              className="rounded-lg"
+              alt="Uno's Picture"
             />
           </motion.div>
         </div>
 
         <div className="text-center mb-10">
-          <p className="text-gray-50 text-5xl font-bold">"Uno"</p>
+          <p className="text-gray-50 text-5xl font-bold">&quot;Uno&ldquo;</p>
           <p className="text-gray-300 text-lg tracking-wide">
             Luka Antonio Salvio I. Uy
           </p>
