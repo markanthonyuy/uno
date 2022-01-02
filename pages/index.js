@@ -9,9 +9,7 @@ export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   return (
-    <div
-      className={`${styles.container} bg-gradient-to-r from-cyan-500 to-blue-500`}
-    >
+    <div className={styles.container}>
       <Head>
         <title>Uno | Luka Antonio Salvio I. Uy</title>
         <meta name="description" content="Uno's website" />
@@ -51,7 +49,9 @@ export default function Home() {
           }}
           transition={{ delay: 0.1 }}
         />
-        <div className="flex flex-col place-content-center h-screen py-4">
+        <div
+          className={`${styles.header} flex flex-col place-content-center h-screen py-4`}
+        >
           <div className="flex place-content-center px-4 mb-10">
             <motion.div
               className="inline-flex drop-shadow"

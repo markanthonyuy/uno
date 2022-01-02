@@ -6,3 +6,18 @@
   min-height: 100vh;
   position: relative;
 }
+
+@keyframes bg-changer {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.header {
+  background-image: var(--bg-gradient);
+  background-size: 300%;
+  animation: bg-changer 10s infinite alternate;
+}
