@@ -31,7 +31,7 @@ export default function Home() {
           className="absolute w-12 h-12 bg-lime-500 rounded-full z-50 opacity-50"
           animate={{
             x: mousePosition.x - 24,
-            y: mousePosition.y - 38,
+            y: mousePosition.y - 26,
           }}
           transition={{ type: 'spring' }}
         />
@@ -39,7 +39,7 @@ export default function Home() {
           className="absolute w-8 h-8 bg-red-500 rounded-full z-50 opacity-50"
           animate={{
             x: mousePosition.x - 16,
-            y: mousePosition.y - 30,
+            y: mousePosition.y - 18,
           }}
           transition={{ type: 'tween' }}
         />
@@ -47,7 +47,7 @@ export default function Home() {
           className="absolute w-4 h-4 bg-yellow-500 rounded-full z-50 opacity-50"
           animate={{
             x: mousePosition.x - 8,
-            y: mousePosition.y - 22,
+            y: mousePosition.y - 10,
           }}
           transition={{ delay: 0.1 }}
         />
