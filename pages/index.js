@@ -6,10 +6,10 @@ import styles from '../styles/Home.module.css'
 import Card from '../components/Card'
 
 export default function Home() {
-  const [mousePosition, setMousePosition] = useState({})
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   return (
-    <motion.div
+    <div
       className={`${styles.container} bg-gradient-to-r from-cyan-500 to-blue-500 py-4`}
     >
       <Head>
@@ -122,6 +122,6 @@ export default function Home() {
           />
         </motion.div>
       </motion.main>
-    </motion.div>
+    </div>
   )
 }
