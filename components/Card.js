@@ -12,7 +12,7 @@ export default function Card({ name, brand, dates, reaction = 'No reaction' }) {
       transition: {
         staggerChildren: 0.3,
         delayChildren: 1.2,
-        delay: 0.8,
+        delay: 0.2,
       },
     },
   }
@@ -30,10 +30,14 @@ export default function Card({ name, brand, dates, reaction = 'No reaction' }) {
 
   return (
     <motion.div
-      className="flex justify-between flex-col bg-white p-3 shadow-md rounded-lg border-blue-400 border"
+      className="flex justify-between flex-col bg-white p-3 shadow-md rounded-lg border-blue-200 border"
       variants={container}
       initial="hidden"
-      animate="show"
+      whileInView="show"
+      viewport={{ once: true }}
+      whileHover={{
+        scale: 1.05,
+      }}
     >
       <div className="flex justify-between">
         <p className="">

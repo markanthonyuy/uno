@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <div
-      className={`${styles.container} bg-gradient-to-r from-cyan-500 to-blue-500 py-4`}
+      className={`${styles.container} bg-gradient-to-r from-cyan-500 to-blue-500`}
     >
       <Head>
         <title>Uno | Luka Antonio Salvio I. Uy</title>
@@ -51,76 +51,80 @@ export default function Home() {
           }}
           transition={{ delay: 0.1 }}
         />
-        <div className="flex place-content-center px-4 mb-5">
-          <motion.div
-            className="inline-flex drop-shadow"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <Image
-              src="/uno.jpg"
-              width="400"
-              height="280"
-              className="rounded-lg pointer-events-none"
-              alt="Uno's Picture"
+        <div className="flex flex-col place-content-center h-screen py-4">
+          <div className="flex place-content-center px-4 mb-10">
+            <motion.div
+              className="inline-flex drop-shadow"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+            >
+              <Image
+                src="/uno.jpg"
+                width="700"
+                height="450"
+                className="rounded-lg pointer-events-none"
+                alt="Uno's Picture"
+              />
+            </motion.div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-gray-50 text-5xl font-bold">&quot;Uno&quot;</p>
+            <p className="text-gray-300 text-lg tracking-wide">
+              Luka Antonio Salvio I. Uy
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-white lg:p-10 md:px-8 py-10">
+          <div className="text-center">
+            <p>Born ♂ June 2021 in Muntinlupa, PH</p>
+          </div>
+
+          <div className="p-5 py-10 text-center">
+            <p className="text-blue-400 text-3xl font-bold">
+              💉 Immunization Record
+            </p>
+          </div>
+
+          <motion.div className="grid lg:grid-cols-3 md:grid-cols-2 content-center gap-8 px-8">
+            <Card
+              name="Hepatitis B"
+              brand="Hexaxim"
+              dates={[
+                'June 2021',
+                'July 2021',
+                'September 2021',
+                'November 2021',
+              ]}
+            />
+            <Card
+              name="DtwP/DTaP"
+              brand="Hexaxim"
+              dates={['July 2021', 'September 2021', 'November 2021']}
+            />
+            <Card
+              name="OPV/IPV"
+              brand="Hexaxim"
+              dates={['July 2021', 'September 2021', 'November 2021']}
+            />
+            <Card
+              name="HiB"
+              brand="Hexaxim"
+              dates={['July 2021', 'September 2021', 'November 2021']}
+            />
+            <Card
+              name="Rotavirus"
+              brand="Rotateq"
+              dates={['July 2021', 'September 2021', 'November 2021']}
+            />
+            <Card
+              name="PCV 10/13"
+              brand="Previnar 13"
+              dates={['August 2021', 'October 2021', 'December 2021']}
             />
           </motion.div>
         </div>
-
-        <div className="text-center mb-10">
-          <p className="text-gray-50 text-5xl font-bold">&quot;Uno&ldquo;</p>
-          <p className="text-gray-300 text-lg tracking-wide">
-            Luka Antonio Salvio I. Uy
-          </p>
-        </div>
-
-        <div className="bg-white p-10 text-center">
-          <p>Born ♂ June 2021 in Muntinlupa, PH</p>
-        </div>
-
-        <div className="p-14 text-center">
-          <p className="text-gray-50 text-3xl font-bold">
-            💉 Immunization Record
-          </p>
-        </div>
-
-        <motion.div className="grid lg:grid-cols-3 md:grid-cols-2 content-center gap-8 px-8">
-          <Card
-            name="Hepatitis B"
-            brand="Hexaxim"
-            dates={[
-              'June 2021',
-              'July 2021',
-              'September 2021',
-              'November 2021',
-            ]}
-          />
-          <Card
-            name="DtwP/DTaP"
-            brand="Hexaxim"
-            dates={['July 2021', 'September 2021', 'November 2021']}
-          />
-          <Card
-            name="OPV/IPV"
-            brand="Hexaxim"
-            dates={['July 2021', 'September 2021', 'November 2021']}
-          />
-          <Card
-            name="HiB"
-            brand="Hexaxim"
-            dates={['July 2021', 'September 2021', 'November 2021']}
-          />
-          <Card
-            name="Rotavirus"
-            brand="Rotateq"
-            dates={['July 2021', 'September 2021', 'November 2021']}
-          />
-          <Card
-            name="PCV 10/13"
-            brand="Previnar 13"
-            dates={['August 2021', 'October 2021', 'December 2021']}
-          />
-        </motion.div>
       </motion.main>
     </div>
   )
