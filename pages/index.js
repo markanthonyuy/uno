@@ -54,14 +54,14 @@ export default function Home() {
         <div className="flex place-content-center px-4 mb-5">
           <motion.div
             className="inline-flex drop-shadow"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
           >
             <Image
               src="/uno.jpg"
               width="400"
               height="280"
-              className="rounded-lg"
+              className="rounded-lg pointer-events-none"
               alt="Uno's Picture"
             />
           </motion.div>
@@ -84,7 +84,7 @@ export default function Home() {
           </p>
         </div>
 
-        <motion.div className="grid grid-cols-3 content-center gap-8 px-8">
+        <motion.div className="grid lg:grid-cols-3 md:grid-cols-2 content-center gap-8 px-8">
           <Card
             name="Hepatitis B"
             brand="Hexaxim"

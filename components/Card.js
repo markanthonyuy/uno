@@ -10,8 +10,9 @@ export default function Card({ name, brand, dates, reaction = 'No reaction' }) {
       opacity: 1,
       y: 0,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.5,
+        staggerChildren: 0.3,
+        delayChildren: 1.2,
+        delay: 0.8,
       },
     },
   }
