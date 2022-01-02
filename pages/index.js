@@ -9,7 +9,7 @@ export default function Home() {
   const [mousePosition, setMousePosition] = useState({})
 
   return (
-    <div
+    <motion.div
       className={`${styles.container} bg-gradient-to-r from-cyan-500 to-blue-500 py-4`}
     >
       <Head>
@@ -122,6 +122,6 @@ export default function Home() {
           />
         </motion.div>
       </motion.main>
-    </div>
+    </motion.div>
   )
 }

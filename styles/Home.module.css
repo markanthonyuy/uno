@@ -1,8 +1,8 @@
 .container {
-  position: relative;
   overflow: hidden;
 }
 
 .main {
   min-height: 100vh;
+  position: relative;
 }
