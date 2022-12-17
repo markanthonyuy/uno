@@ -8,40 +8,122 @@ import HeaderImage from '../components/HeaderImage'
 export function getServerSideProps() {
   const immunizationData = [
     {
-      name: 'Hepatitis B',
-      brand: 'Hexaxim',
-      dates: ['June 2021', 'July 2021', 'September 2021', 'November 2021'],
-      reaction: '',
+      year: 2022,
+      immunizations: [
+        {
+          date: 'February',
+          brand: 'MMR',
+          names: ['Measles'],
+          reaction: '',
+        },
+        {
+          date: 'April',
+          brand: 'Sanofi Pasteur',
+          names: ['Vaxigrip Tetra (Flu)'],
+          reaction: '',
+        },
+        {
+          date: 'May',
+          brand: 'Sanofi Pasteur',
+          names: ['Vaxigrip Tetra (Flu)'],
+          reaction: '',
+        },
+        {
+          date: 'June',
+          brand: 'Viravax',
+          names: ['Varicella Virus Vaccine Live (Chickenpox)'],
+          reaction: '',
+        },
+        {
+          date: 'July',
+          brand: 'MMR',
+          names: ['Measles'],
+          reaction: '',
+        },
+        {
+          date: 'August',
+          brand: 'Sanofi Pasteur',
+          names: ['Avaxim (Hepa A)'],
+          reaction: '',
+        },
+        {
+          date: 'October',
+          brand: 'Hexaxim',
+          names: ['Hepatitis B', 'DtwP/DTaP', 'OPV/IPV', 'HiB'],
+          reaction: '',
+        },
+        {
+          date: 'December',
+          brand: 'Previnar 13',
+          names: ['PCV 10/13'],
+          reaction: '',
+        },
+      ],
     },
     {
-      name: 'DtwP/DTaP',
-      brand: 'Hexaxim',
-      dates: ['July 2021', 'September 2021', 'November 2021'],
-      reaction: '',
-    },
-    {
-      name: 'OPV/IPV',
-      brand: 'Hexaxim',
-      dates: ['July 2021', 'September 2021', 'November 2021'],
-      reaction: '',
-    },
-    {
-      name: 'HiB',
-      brand: 'Hexaxim',
-      dates: ['July 2021', 'September 2021', 'November 2021'],
-      reaction: '',
-    },
-    {
-      name: 'Rotavirus',
-      brand: 'Rotateq',
-      dates: ['July 2021', 'September 2021', 'November 2021'],
-      reaction: '',
-    },
-    {
-      name: 'PCV 10/13',
-      brand: 'Previnar 13',
-      dates: ['August 2021', 'October 2021', 'December 2021'],
-      reaction: '',
+      year: 2021,
+      immunizations: [
+        {
+          date: 'June',
+          brand: 'Hexaxim',
+          names: ['Hepatitis B'],
+          reaction: '',
+        },
+        {
+          date: 'July',
+          brand: 'Hexaxim',
+          names: ['Hepatitis B', 'DtwP/DTaP', 'OPV/IPV', 'HiB'],
+          reaction: '',
+        },
+        {
+          date: 'July',
+          brand: 'Rotateq',
+          names: ['Rotavirus'],
+          reaction: '',
+        },
+        {
+          date: 'August',
+          brand: 'Previnar 13',
+          names: ['PCV 10/13'],
+          reaction: '',
+        },
+        {
+          date: 'September',
+          brand: 'Hexaxim',
+          names: ['Hepatitis B', 'DtwP/DTaP', 'OPV/IPV', 'HiB'],
+          reaction: '',
+        },
+        {
+          date: 'September',
+          brand: 'Rotateq',
+          names: ['Rotavirus'],
+          reaction: '',
+        },
+        {
+          date: 'October',
+          brand: 'Previnar 13',
+          names: ['PCV 10/13'],
+          reaction: '',
+        },
+        {
+          date: 'November',
+          brand: 'Hexaxim',
+          names: ['Hepatitis B', 'DtwP/DTaP', 'OPV/IPV', 'HiB'],
+          reaction: '',
+        },
+        {
+          date: 'November',
+          brand: 'Rotateq',
+          names: ['Rotavirus'],
+          reaction: '',
+        },
+        {
+          date: 'December',
+          brand: 'Previnar 13',
+          names: ['PCV 10/13'],
+          reaction: '',
+        },
+      ],
     },
   ]
 
@@ -113,17 +195,27 @@ export default function Home({ immunizationData }) {
             </p>
           </div>
 
-          <motion.div className="grid lg:grid-cols-3 md:grid-cols-2 content-center gap-8 px-8">
-            {immunizationData.map(({ name, brand, dates, reaction }, i) => (
-              <Card
-                key={`record-${name}-${i}`}
-                name={name}
-                brand={brand}
-                dates={dates}
-                reaction={reaction}
-              />
+          <div className="">
+            {immunizationData.map(({ year, immunizations }) => (
+              <div key={`year-${year}`}>
+                <div className="m-8 flex bg-blue-500 p-3 rounded-lg border-blue-200 border-blue-500 text-white font-bold">
+                  {year}
+                </div>
+
+                <motion.div className="grid lg:grid-cols-3 md:grid-cols-2 content-center gap-8 px-8">
+                  {immunizations.map(({ names, brand, date, reaction }, i) => (
+                    <Card
+                      key={`record-${i}`}
+                      names={names}
+                      brand={brand}
+                      date={date}
+                      reaction={reaction}
+                    />
+                  ))}
+                </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </motion.main>
     </div>

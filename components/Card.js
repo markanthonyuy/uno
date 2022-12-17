@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-export default function Card({ name, brand, dates, reaction = 'No reaction' }) {
+export default function Card({ names, brand, date, reaction = 'No reaction' }) {
   const container = {
     hidden: {
       opacity: 0,
@@ -41,10 +41,10 @@ export default function Card({ name, brand, dates, reaction = 'No reaction' }) {
     >
       <div className="flex justify-between">
         <p className="">
-          {name} <span className="text-gray-500 text-xs">({brand})</span>
+          {date} <span className="text-gray-500 text-xs">({brand})</span>
         </p>
         <div className="flex flex-col text-right text-xs">
-          {dates.map((date, key) => (
+          {names.map((date, key) => (
             <motion.span className="text-blue-500" key={key} variants={item}>
               {date}
             </motion.span>
