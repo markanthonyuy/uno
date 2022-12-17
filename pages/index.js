@@ -14,7 +14,7 @@ export function getServerSideProps() {
           date: 'February',
           brand: 'MMR',
           names: ['Measles'],
-          reaction: '',
+          reaction: 'Fever',
         },
         {
           date: 'April',
