@@ -28,7 +28,7 @@ export const immunizationData = [
       {
         date: 'April',
         brand: 'Sanofi Pasteur',
-        names: ['Avaxim (Hepa A)'],
+        names: ['Avaxim 80 U (Hepa A)'],
         reaction: '',
       },
       {
@@ -40,7 +40,9 @@ export const immunizationData = [
       {
         date: 'August',
         brand: 'Sanofi Pasteur',
-        names: ['Meningococcal (Groups A, C, Y, W) Conjugate Vaccine'],
+        names: [
+          'Meningococcal (Groups A, C, Y, W) Conjugate Vaccine (MENQUADFI)',
+        ],
         reaction: '',
       },
       {
@@ -87,7 +89,7 @@ export const immunizationData = [
       {
         date: 'August',
         brand: 'Sanofi Pasteur',
-        names: ['Avaxim (Hepa A)'],
+        names: ['Avaxim 80 U (Hepa A)'],
         reaction: '',
       },
       {
